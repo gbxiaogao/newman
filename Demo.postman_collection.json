@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "44205e80-beef-4fea-ba31-063ebf8c5566",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "豆瓣电影搜索",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5e8e5bf1-2cb6-4384-bb29-127272f83044",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.douban.com/v2/movie/subject/26942674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"douban",
+						"com"
+					],
+					"path": [
+						"v2",
+						"movie",
+						"subject",
+						"26942674"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
