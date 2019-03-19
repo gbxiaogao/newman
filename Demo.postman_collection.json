@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "豆瓣电影搜索",
+			"name": "douban_movie_search",
 			"event": [
 				{
 					"listen": "test",
@@ -41,6 +41,46 @@
 						"movie",
 						"subject",
 						"26942674"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "douban_movieinfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.douban.com/v2/movie/search?q=战狼&start=25&count=25",
+					"protocol": "https",
+					"host": [
+						"api",
+						"douban",
+						"com"
+					],
+					"path": [
+						"v2",
+						"movie",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "战狼"
+						},
+						{
+							"key": "start",
+							"value": "25"
+						},
+						{
+							"key": "count",
+							"value": "25"
+						}
 					]
 				}
 			},
